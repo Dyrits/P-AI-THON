@@ -3,7 +3,7 @@ import os
 def get_files_info(working_directory, directory="."):
     paths = {
         "working_directory": os.path.abspath(working_directory),
-        "directory": os.path.abspath(os.path.join(working_directory, directory)),
+        "directory": os.path.abspath(os.path.join(working_directory, directory))
     }
 
     if not paths.get("directory").startswith(paths.get("working_directory")):
