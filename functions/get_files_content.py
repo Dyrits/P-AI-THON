@@ -21,5 +21,5 @@ def get_file_content(working_directory, file_path):
                 return content
             else:
                 return file.read()
-    except Exception as e:
-        return f"Error: Failed to read file ({e}): ${file_path}"
+    except Exception as exception:
+        return f"Error: Failed to read file ({file_path}): ${exception}"
