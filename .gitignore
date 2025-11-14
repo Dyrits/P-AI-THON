@@ -13,3 +13,6 @@ venv/
 # Integrated Development Environment (IDE) files
 .vscode/
 .idea/
+
+# AI Studio API Key
+.env
