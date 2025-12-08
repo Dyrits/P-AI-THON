@@ -5,6 +5,7 @@ from functions.get_files_info import get_files_info
 from functions.run_python_file import run_python_file
 from functions.write_file import write_file
 
+
 def run_tests():
     print('get_files_info("calculator", "."):')
     print(get_files_info("calculator", "."))
@@ -36,7 +37,9 @@ def run_tests():
     print('write_file("calculator", "lorem.txt", "wait, this isn\'t lorem ipsum"):')
     print(write_file("calculator", "lorem.txt", "wait, this isn't lorem ipsum"))
 
-    print('write_file("calculator", "pkg/morelorem.txt", "lorem ipsum dolor sit amet"):')
+    print(
+        'write_file("calculator", "pkg/morelorem.txt", "lorem ipsum dolor sit amet"):'
+    )
     print(write_file("calculator", "pkg/morelorem.txt", "lorem ipsum dolor sit amet"))
 
     print('write_file("calculator", "/tmp/temp.txt", "this should not be allowed"):')
@@ -58,6 +61,7 @@ def run_tests():
 
     print('run_python_file("calculator", "lorem.txt"):')
     print(run_python_file("calculator", "lorem.txt"))
+
 
 if __name__ == "__main__":
     run_tests()

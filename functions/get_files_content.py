@@ -1,10 +1,11 @@
 import os
 from config import MAX_CHARS
 
+
 def get_file_content(working_directory, file_path):
     paths = {
         "working_directory": os.path.abspath(working_directory),
-        "file_path": os.path.abspath(os.path.join(working_directory, file_path))
+        "file_path": os.path.abspath(os.path.join(working_directory, file_path)),
     }
 
     if not paths.get("file_path").startswith(paths.get("working_directory")):

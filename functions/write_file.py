@@ -4,7 +4,7 @@ import os
 def write_file(working_directory, file_path, content):
     paths = {
         "working_directory": os.path.abspath(working_directory),
-        "file_path": os.path.abspath(os.path.join(working_directory, file_path))
+        "file_path": os.path.abspath(os.path.join(working_directory, file_path)),
     }
 
     if not paths.get("file_path").startswith(paths.get("working_directory")):

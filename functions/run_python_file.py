@@ -1,10 +1,11 @@
 import os
 import subprocess
 
+
 def run_python_file(working_directory, file_path, args=[]):
     paths = {
         "working_directory": os.path.abspath(working_directory),
-        "file_path": os.path.abspath(os.path.join(working_directory, file_path))
+        "file_path": os.path.abspath(os.path.join(working_directory, file_path)),
     }
 
     if not paths.get("file_path").startswith(paths.get("working_directory")):
@@ -20,7 +21,7 @@ def run_python_file(working_directory, file_path, args=[]):
             cwd=paths["working_directory"],
             capture_output=True,
             text=True,
-            timeout=30
+            timeout=30,
         )
         output_parts = []
         if result.stdout:
